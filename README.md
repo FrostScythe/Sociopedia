@@ -1,7 +1,3 @@
-Here’s the revised content formatted for inclusion in your main README file:
-
----
-
 ## Running the Application
 
 To run the application, follow the steps below:
@@ -35,6 +31,3 @@ To run the application, follow the steps below:
    ```bash
    npm run start
    ```
-
---- 
-
