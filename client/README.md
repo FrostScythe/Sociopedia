@@ -1,70 +1,129 @@
-# Getting Started with Create React App
+# Sociopedia Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern social media application built with React, Redux, and Material-UI.
+
+## Overview
+
+Sociopedia is a full-featured social media platform that allows users to:
+- Create and manage profiles
+- Share posts with text and images
+- Connect with friends
+- Like and comment on posts
+- Toggle between light and dark modes
+- View user profiles and friend lists
+- Responsive design for mobile and desktop
+
+## Tech Stack
+
+- **React** - Frontend framework
+- **Redux Toolkit** - State management
+- **Material-UI** - UI component library
+- **React Router** - Navigation and routing
+- **Formik** - Form handling
+- **Yup** - Form validation
+- **React Dropzone** - File upload handling
+
+## Features
+
+### Authentication
+- User registration with profile picture upload
+- Login with email and password
+- JWT token-based authentication
+
+### Social Features
+- Create posts with text and images
+- Like and unlike posts
+- Add and remove friends
+- View friend lists
+- Comment on posts
+
+### User Interface
+- Responsive design for all screen sizes
+- Dark/Light mode toggle
+- Material Design components
+- Clean and modern UI
+
+## Getting Started
+
+1. Clone the repository
+
+2. Install dependencies:
+
+    ```bash
+    cd client
+    ```
+     ```bash
+    npm i
+    ```
+
+3. Set up environment variables:
+Create a `.env` file in the client directory with:
+
+    ```
+    REACT_APP_API_URL=http://localhost:3001
+    ```
+
+4. Start the development server:
+    ```bash
+    npm start
+    ```
 
 ## Available Scripts
 
-In the project directory, you can run:
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run eject` - Ejects from Create React App
 
-### `npm start`
+## API Integration
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The frontend communicates with a Node.js/Express backend API. Key endpoints include:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- `/auth/login` - User authentication
+- `/auth/register` - User registration
+- `/users` - User management
+- `/posts` - Post management
+- `/users/:id/friends` - Friend management
 
-### `npm test`
+## Component Documentation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Widgets
+- **UserWidget** - Displays user profile information
+- **PostWidget** - Renders individual posts
+- **FriendListWidget** - Shows user's friends
+- **MyPostWidget** - Create new posts
+- **AdvertWidget** - Displays advertisements
 
-### `npm run build`
+### Forms
+- **LoginForm** - User authentication
+- **RegisterForm** - New user registration
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Layout
+- **Navbar** - Main navigation
+- **FlexBetween** - Flexbox utility component
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## State Management
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Redux Toolkit is used for state management with the following slices:
+- Auth state (user, token)
+- Posts
+- Theme mode
 
-### `npm run eject`
+## Styling
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Material-UI v5 theming
+- Responsive design using `useMediaQuery`
+- Custom theme with light/dark mode support
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contributing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## License
 
-## Learn More
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
